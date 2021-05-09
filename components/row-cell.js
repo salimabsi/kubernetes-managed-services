@@ -9,10 +9,11 @@ export default function ({ content }) {
 
     const isBoolean = typeof content === 'boolean';
     const isNeedsHelp = typeof content === 'string' && content === "Needs help";
+    const isNA = typeof content === 'string' && content === "Not available";
     const isLink = typeof content === 'string' && isContentLink(content)
 
 
-    
+
     var actualContent = content;
     var colors = 'hover:bg-blueGray-100';
 
@@ -26,15 +27,19 @@ export default function ({ content }) {
         colors = 'text-yellow-900 bg-yellow-200 hover:bg-yellow-100'
     }
 
+    if (isNA) {
+        colors = 'text-white bg-fuchsia-600 hover:bg-fuchsia-700'
+    }
+
     if (isLink) {
         colors = ''
         actualContent = <a className="text-blue-500 hover:text-blue-400 whitespace-nowrap text-xs" href={content}>{content}</a>
     }
 
+    if (isBoolean || isLink) {
+        return <td className={`${colors} px-4 py-3.5 border border-gray-400`}>{actualContent}</td>
+    } else {
+        return <td className={`${colors} px-4 py-3.5 border border-gray-400`} dangerouslySetInnerHTML={{ __html: actualContent }}></td>
+    }
 
-    return (
-        <td className={`${colors} px-4 py-3.5 border border-gray-400`}>
-            {actualContent}
-        </td>
-    )
 }
