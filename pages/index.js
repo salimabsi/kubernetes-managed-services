@@ -1,14 +1,15 @@
-import Table from '../components/table'
-import Meta from '../components/meta'
+import MobileViewTable from '../components/mobile-view'
+import DesktopViewTable from '../components/desktop-view'
+import Meta from '../components/shared/meta'
 
-const table = {}
 
 export default function Home() {
   return (
     <>
       <Meta />
       <div className="font-Inter">
-        <Table table={table} />
+        <MobileViewTable />
+        <DesktopViewTable />
       </div>
     </>
   )
