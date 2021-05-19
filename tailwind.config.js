@@ -23,6 +23,7 @@ module.exports = {
       },
       fontFamily: {
         'Inter': ['Inter'],
+        'work-sans': ['Work Sans', 'sans-serif'],
       },
     },
   },
