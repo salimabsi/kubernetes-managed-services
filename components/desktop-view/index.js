@@ -6,10 +6,10 @@ export default function DesktopViewTable() {
 
     return (
         <div className="desktop-view hidden md:block">
-            <table className="border-collapse bg-gray-50">
-                <thead className="whitespace-nowrap">
-                    <th className="px-3 min-w-min pr-14"><Logo /></th>
-                    {tableData.titles.map((title, index) => <th index={index}>{title}</th>)}
+            <table cellPadding="0">
+                <thead>
+                    <th><Logo /></th>
+                    {tableData.titles.map((title, index) => <th index={index}><div>{title}</div></th>)}
                 </thead>
                 <tbody>
                     {tableData.sections.map((secData, index) => <TableSection key={index} sectionData={secData} />)}
