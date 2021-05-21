@@ -79,7 +79,7 @@
     @apply cursor-pointer;
   }
   .desktop-view table tbody tr.sticky-row td.sticky-title span {
-    @apply sticky left-0 p-4 inline-block;
+    @apply sticky left-0 p-4 inline-block text-xl font-medium;
   }
   .desktop-view table tbody tr:not(.sticky-row) {
     @apply text-sm font-medium text-blueGray-900;
