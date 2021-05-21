@@ -6,8 +6,7 @@
 @tailwind utilities;
 
 @layer components {
-  
-  table tbody tr td {
+  table tbody tr td:not(.sticky-title) {
     @apply px-2 py-2.5 sm:px-4 sm:py-3.5 md:py-2 w-1/2 sm:w-7/12 md:w-auto text-center border border-gray-400 hover:bg-blueGray-100;
   }
   table tbody tr td a {
@@ -39,7 +38,7 @@
     @apply text-xl font-medium font-work-sans text-blueGray-900;
   }
   .mobile-view .section header svg {
-    @apply transform transition-transform duration-300 ;
+    @apply transform transition-transform duration-300;
   }
   .mobile-view .section header .rotate {
     @apply rotate-180;
@@ -60,20 +59,32 @@
     @apply px-2 py-2.5 sm:px-4 sm:py-3.5 w-1/2 sm:w-5/12 font-medium text-left bg-blueGray-200 hover:bg-blueGray-300 border border-gray-400 transition-colors;
   }
 
+
+  .desktop-view table  {
+    @apply border-collapse bg-gray-50 w-screen h-screen overflow-auto;
+  }
+  .desktop-view table thead {
+    @apply whitespace-nowrap;
+  }
+  .desktop-view table thead th:first-of-type {
+    @apply sticky top-0 z-10 px-3 min-w-min pr-14 bg-gray-50;
+  }
   .desktop-view table thead th:not(:first-of-type) {
+    @apply sticky top-0 z-10;
+  }
+  .desktop-view table thead th:not(:first-of-type) div {
     @apply px-4 py-3.5 text-sm font-normal text-blueGray-100 bg-gray-600 hover:bg-gray-700 border border-gray-500 transition-colors;
   }
-
-  .desktop-view table tbody div {
-    @apply relative mt-16 mb-10 p-2 font-medium text-xl text-left font-work-sans text-blueGray-900 whitespace-nowrap;
+  .desktop-view table tbody tr.sticky-row {
+    @apply cursor-pointer;
   }
-  .desktop-view table tbody div span {
-    @apply absolute;
+  .desktop-view table tbody tr.sticky-row td.sticky-title span {
+    @apply sticky left-0 p-4 inline-block;
   }
-  .desktop-view table tbody tr {
+  .desktop-view table tbody tr:not(.sticky-row) {
     @apply text-sm font-medium text-blueGray-900;
   }
-  .desktop-view table tbody tr td:first-of-type {
+  .desktop-view table tbody tr:not(.sticky-row) td:first-of-type {
     @apply px-4 py-2 text-left bg-blueGray-200 hover:bg-blueGray-300 border border-gray-400 transition-colors whitespace-nowrap;
   }
 }
