@@ -78,6 +78,9 @@
   .desktop-view table tbody tr.sticky-row {
     @apply cursor-pointer;
   }
+  .desktop-view table tbody tr.sticky-row td.sticky-title {
+    @apply sticky top-12 bg-gray-50;
+  }
   .desktop-view table tbody tr.sticky-row td.sticky-title span {
     @apply sticky left-0 p-4 inline-block text-xl font-medium;
   }
