@@ -12,22 +12,22 @@
   table tbody tr td a {
     @apply text-xs break-all md:break-normal text-blue-500 hover:text-blue-400;
   }
-  table tbody tr .true {
+  table tbody tr td.true {
     @apply text-green-600 bg-green-200 hover:bg-green-100;
   }
-  table tbody tr .false {
+  table tbody tr td.false {
     @apply text-red-600 bg-red-200 hover:bg-red-100;
   }
-  table tbody tr .needs-help {
+  table tbody tr td.needs-help {
     @apply text-yellow-900 bg-yellow-200 hover:bg-yellow-100;
   }
-  table tbody tr .not-available {
+  table tbody tr td.not-available {
     @apply text-fuchsia-900 bg-fuchsia-200 hover:bg-fuchsia-100 md:bg-fuchsia-300 md:hover:bg-fuchsia-200;
   }
-  table tbody tr .not-documented {
+  table tbody tr td.not-documented {
     @apply text-lime-900 bg-lime-200 hover:bg-lime-100 md:bg-lime-300 md:hover:bg-lime-200;
   }
-  table tbody tr .link {
+  table tbody tr td.link {
     @apply hover:bg-blue-50;
   }
 

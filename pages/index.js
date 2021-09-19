@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <>
       <Meta />
-      <div className="font-Inter">
+      <div>
         <MobileViewTable />
         <DesktopViewTable />
       </div>
