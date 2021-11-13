@@ -13,8 +13,8 @@ module.exports = {
         fuchsia: colors.fuchsia,
       },
       fontFamily: {
-        'Inter': ['Inter', ...defaultTheme.fontFamily.sans],
-        'work-sans': ['Work Sans', 'sans-serif'],
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        header: ['Work Sans', 'sans-serif'],
       },
     },
   },

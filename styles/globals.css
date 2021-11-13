@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/* keep only what is used */
+
 
 @tailwind base;
 @tailwind components;
@@ -35,7 +37,7 @@
     @apply px-4 flex items-center justify-between cursor-pointer;
   }
   .mobile-view .section header h3 {
-    @apply text-xl font-medium font-work-sans text-blueGray-900;
+    @apply text-xl font-medium font-header text-blueGray-900;
   }
   .mobile-view .section header svg {
     @apply transform transition-transform duration-300;
